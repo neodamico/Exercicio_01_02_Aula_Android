@@ -5,14 +5,40 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/saudacao"
-        android:textSize="24sp"
-        android:textColor="@color/cor_destaque"
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="Logo do Aplicatvo"
 
         />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu email"
+        android:inputType="textEmailAddress"
+
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/senha"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua senha "
+        android:inputType="textPassword"
+
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/botao"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        />
+
+
+
 </LinearLayout>
