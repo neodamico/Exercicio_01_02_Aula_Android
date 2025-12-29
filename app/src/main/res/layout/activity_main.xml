@@ -1,44 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageViewLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:contentDescription="Logo do Aplicatvo"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="469dp">
 
-        />
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:hint="Digite seu email"
-        android:inputType="textEmailAddress"
+            android:contentDescription="Logo do Aplicatvo"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
 
-        android:minHeight="48dp" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="244dp"
+            android:layout_height="48dp"
+            android:hint="Digite seu email"
+            android:inputType="textEmailAddress"
 
-    <EditText
-        android:id="@+id/senha"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:hint="Digite sua senha "
-        android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+            app:layout_constraintVertical_bias="0.15" />
 
-        android:minHeight="48dp" />
+        <EditText
+            android:id="@+id/senha"
+            android:layout_width="244dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:hint="Digite sua senha "
 
-    <Button
-        android:id="@+id/botao"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Entrar"
-        />
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            app:layout_constraintVertical_bias="0.004" />
 
+        <Button
+            android:id="@+id/botao"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Entrar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/senha"
+            app:layout_constraintVertical_bias="0.172" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>
