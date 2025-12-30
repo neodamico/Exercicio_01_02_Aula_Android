@@ -1,6 +1,8 @@
 package com.example.meuaplicativo
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -17,6 +19,16 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val meuTexto:TextView=findViewById(R.id.meuTexto)
+        val meuBotao: Button = findViewById(R.id.botao)
+
+        meuBotao.setOnClickListener {
+            meuTexto.text="O Texto mudou!!"
+        }
+
+
+
 
     }
 }
