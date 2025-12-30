@@ -8,6 +8,9 @@ android {
     namespace = "com.example.meuaplicativo"
     compileSdk {
         version = release(36)
+        buildFeatures{
+            viewBinding=true
+        }
     }
 
     defaultConfig {

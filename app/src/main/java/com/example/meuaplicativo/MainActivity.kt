@@ -13,21 +13,30 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.meuaplicativo.databinding.ActivityMainBinding
 import com.example.meuaplicativo.ui.theme.MeuAplicativoTheme
 
 class MainActivity : ComponentActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val meuTexto:TextView=findViewById(R.id.meuTexto)
-        val meuBotao: Button = findViewById(R.id.botao)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        meuBotao.setOnClickListener {
-            meuTexto.text="O Texto mudou!!"
+        /*
+                usando findViewByID
+                val meuTexto:TextView=findViewById(R.id.meuTexto)
+                val meuBotao: Button = findViewById(R.id.botao)
+
+                meuBotao.setOnClickListener {
+                    meuTexto.text="O Texto mudou!!"}*/
+
+        binding.botao.setOnClickListener {
+            binding.meuTexto.text = "Conectado com ViewBinding!"
         }
-
-
 
 
     }
